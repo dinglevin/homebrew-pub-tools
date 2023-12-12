@@ -5,21 +5,21 @@
 class Getlastn < Formula
   desc ""
   homepage "https://github.com/dinglevin/levin-pub-tools/getlastn"
-  version "0.6"
+  version "0.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.6/levin-pub-tools_0.6_darwin_arm64.tar.gz"
-      sha256 "a1c42e1c02d01d28cc9385291e93f65ee481bf075f4d92a78181b548de307349"
+    if Hardware::CPU.intel?
+      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.7/levin-pub-tools_0.7_darwin_amd64.tar.gz"
+      sha256 "3b1513f5d4d17e8217868834566b8b83ec315bda3d6cb8f3f02965c6f596016a"
 
       def install
         bin.install "appendstr"
         bin.install "getlastn"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.6/levin-pub-tools_0.6_darwin_amd64.tar.gz"
-      sha256 "c4146dcf9c4408db3a0d0365fa87e653b766590d1fcc51485da711bfcee2ebd8"
+    if Hardware::CPU.arm?
+      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.7/levin-pub-tools_0.7_darwin_arm64.tar.gz"
+      sha256 "30a405bacfc260f1e76c938d3216bec4fee192ae2960be4bdecf0b0f5685fc77"
 
       def install
         bin.install "appendstr"
@@ -30,8 +30,8 @@ class Getlastn < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.6/levin-pub-tools_0.6_linux_amd64.tar.gz"
-      sha256 "30ad5505da967c05e53e2a310396ab8d40b98f8a0c00ad5d4a03868406bfa8e5"
+      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.7/levin-pub-tools_0.7_linux_amd64.tar.gz"
+      sha256 "8a6bcf9551262e41d0104c2eab6342247064c7592d8ff04132e5262d63510156"
 
       def install
         bin.install "appendstr"
@@ -39,8 +39,8 @@ class Getlastn < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.6/levin-pub-tools_0.6_linux_arm64.tar.gz"
-      sha256 "3b2be9a464bac73dbecc746f47496a4c0162df28af738af92cc0ce7f246b3cc8"
+      url "https://github.com/dinglevin/levin-pub-tools/releases/download/v0.7/levin-pub-tools_0.7_linux_arm64.tar.gz"
+      sha256 "903d3727620091eeca7837e01323102c08334163a6f4fbe4bcd26abed629b524"
 
       def install
         bin.install "appendstr"
